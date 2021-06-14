@@ -92,6 +92,7 @@ const CustomMenu = styled(MenuIcon)`
 
 `
 const BurgerNav = styled.div`
+    background-color:white;
     position: fixed; 
     top: 0;
     bottom: 0;

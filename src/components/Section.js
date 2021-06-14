@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import Fade from 'react-reveal/Fade';
+import "./section.css";
 
 function Section( {title, description, leftBtnText, rightBtnText, backgroundIMG} ) {
     return (
@@ -14,11 +15,11 @@ function Section( {title, description, leftBtnText, rightBtnText, backgroundIMG}
             <Buttons>
                 <Fade bottom>
                     <ButtonGroup>
-                        <LeftButton>
+                        <LeftButton className="button">
                             {leftBtnText}
                         </LeftButton>
                         {rightBtnText && 
-                            <RightButton>
+                            <RightButton className="button">
                                 {rightBtnText}
                             </RightButton>
                         }
@@ -38,7 +39,6 @@ const Wrap = styled.div`
   backgroud-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url('/images/model-s.jpg');
   display: flex;
   flex-direction: column;
   justify-content: space-between; //vertical
@@ -47,9 +47,9 @@ const Wrap = styled.div`
 `
 
 const ItemText = styled.div`
-    padding-top: 15vh;
+    padding-top: 13vh;
     text-align: center;
-    
+    padding-bottom:59vh;
 `;
 
 const ButtonGroup = styled.div`
@@ -61,20 +61,7 @@ const ButtonGroup = styled.div`
 `;
 
 const LeftButton = styled.div`
-    background-color: rgba(23, 26, 32, 0.8);
-    height:40px;
-    width: 256px;
-    color: white;
-    disply: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100px;
-    opacity: 0.85;
-    text-transform: uppercase;
-    font-size: 12px;
-    cursor: pointer;
-    margin: 20px;
-    text-align: center;
+
 `
 const RightButton = styled(LeftButton)`
     background: white;
